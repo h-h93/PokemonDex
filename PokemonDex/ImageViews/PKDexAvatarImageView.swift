@@ -30,4 +30,6 @@ class PKDexAvatarImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
+    
+    
 }
