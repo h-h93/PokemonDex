@@ -37,7 +37,7 @@ class PKDexCollectionViewCell: UICollectionViewCell {
             pokemonImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             pokemonImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             pokemonImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            pokemonImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
+            pokemonImage.heightAnchor.constraint(equalToConstant: 100),
             
             pokemonNameLabel.topAnchor.constraint(equalTo: pokemonImage.bottomAnchor, constant: 5),
             pokemonNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),

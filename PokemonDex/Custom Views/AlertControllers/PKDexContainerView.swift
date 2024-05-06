@@ -1,6 +1,6 @@
 import UIKit
 
-class MDBContainerView: UIView {
+class PKDexContainerView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

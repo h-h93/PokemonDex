@@ -1,13 +1,6 @@
-//
-//  BRButton.swift
-//  BookRepo
-//
-//  Created by hanif hussain on 11/03/2024.
-//
-
 import UIKit
 
-class MDBButton: UIButton {
+class PKDexButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

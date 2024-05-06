@@ -11,7 +11,6 @@ class PKDexAvatarImageView: UIImageView {
     
     let placeHolderImage = UIImage(resource: .pikachuPng)
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -23,11 +22,17 @@ class PKDexAvatarImageView: UIImageView {
     }
     
     
-    func configure() {
+    private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
         image = placeHolderImage
+        contentMode = .scaleAspectFit
         translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    
+    func downloadPokemonImage(url: String) {
+        Task(priority: .background) { image = await NetworkManager.shared.downloadImage(fromUrl: url) ?? placeHolderImage }
     }
     
     

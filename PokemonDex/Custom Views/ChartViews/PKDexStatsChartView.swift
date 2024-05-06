@@ -14,7 +14,7 @@ struct ChartData: Identifiable, Equatable {
     var count: Int
 }
 // hp, att, defence, special attack, special defence, speed
-struct PokemonStatsChartView: View {
+struct PKDexStatsChartView: View {
     var data: [ChartData]
     
     init(data: [ChartData]) {

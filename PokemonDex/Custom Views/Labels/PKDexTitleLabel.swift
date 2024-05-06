@@ -20,18 +20,22 @@ class PKDexTitleLabel: UILabel {
     }
     
     
-    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+    convenience init(textAlignment: NSTextAlignment) {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .semibold)
+
     }
     
     
-    func configure() {
+    private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
+        font = UIFont.preferredFont(forTextStyle: .title2)
         textColor = .label
         adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.9
+        adjustsFontForContentSizeCategory = true
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = 0.75
+        numberOfLines = 2
         lineBreakMode = .byTruncatingTail
         
     }

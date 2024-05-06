@@ -1,10 +1,10 @@
 import UIKit
 
-class MDBAlertVC: UIViewController {
-    let containerView = MDBContainerView()
-    let titleLabel = MDBTitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel = MDBBodyLabel(textAlignment: .center)
-    let actionButton = MDBButton(colour: .systemMint, title: "Ok", systemImageName: "checkmark.circle")
+class PKDexAlertVC: UIViewController {
+    let containerView = PKDexContainerView()
+    let titleLabel = PKDexTitleLabel(textAlignment: .center)
+    let messageLabel = PKDexBodyLabel(textAlignment: .center)
+    let actionButton = PKDexButton(colour: .systemMint, title: "Ok", systemImageName: "checkmark.circle")
 
     var alertTitle: String?
     var message: String?

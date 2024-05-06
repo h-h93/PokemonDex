@@ -11,16 +11,16 @@ import Foundation
 // MARK: - PokemonStats
 struct PokemonDetails: Codable {
     let baseHappiness, captureRate: Int
-    let color: Color
-    let eggGroups: [Color]
+    let color: Result
+    let eggGroups: [Result]
     let evolutionChain: EvolutionChain
-    let evolvesFromSpecies: Color?
+    let evolvesFromSpecies: Result?
     let flavorTextEntries: [FlavorTextEntry]
     let formDescriptions: [String]
     let formsSwitchable: Bool
     let genderRate: Int
     let genera: [Genus]
-    let generation, growthRate, habitat: Color
+    let generation, growthRate, habitat: Result
     let hasGenderDifferences: Bool
     let hatchCounter, id: Int
     let isBaby, isLegendary, isMythical: Bool
@@ -29,14 +29,8 @@ struct PokemonDetails: Codable {
     let order: Int
     let palParkEncounters: [PalParkEncounter]
     let pokedexNumbers: [PokedexNumber]
-    let shape: Color
+    let shape: Result
     let varieties: [Variety]
-}
-
-// MARK: - Color
-struct Color: Codable {
-    let name: String
-    let url: String
 }
 
 // MARK: - EvolutionChain
@@ -47,35 +41,35 @@ struct EvolutionChain: Codable {
 // MARK: - FlavorTextEntry
 struct FlavorTextEntry: Codable {
     let flavorText: String
-    let language, version: Color
+    let language, version: Result
 }
 
 // MARK: - Genus
 struct Genus: Codable {
     let genus: String
-    let language: Color
+    let language: Result
 }
 
 // MARK: - Name
 struct Name: Codable {
-    let language: Color
+    let language: Result
     let name: String
 }
 
 // MARK: - PalParkEncounter
 struct PalParkEncounter: Codable {
-    let area: Color
+    let area: Result
     let baseScore, rate: Int
 }
 
 // MARK: - PokedexNumber
 struct PokedexNumber: Codable {
     let entryNumber: Int
-    let pokedex: Color
+    let pokedex: Result
 }
 
 // MARK: - Variety
 struct Variety: Codable {
     let isDefault: Bool
-    let pokemon: Color
+    let pokemon: Result
 }
