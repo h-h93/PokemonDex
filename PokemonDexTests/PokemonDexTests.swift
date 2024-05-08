@@ -1,10 +1,3 @@
-//
-//  PokemonDexTests.swift
-//  PokemonDexTests
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import XCTest
 @testable import PokemonDex
 

@@ -1,10 +1,3 @@
-//
-//  PKDexLoadingAnimationVC.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 07/03/2024.
-//
-
 import UIKit
 
 class PKDexLoadingAnimationVC: UIViewController {

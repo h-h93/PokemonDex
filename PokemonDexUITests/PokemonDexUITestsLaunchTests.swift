@@ -1,10 +1,3 @@
-//
-//  PokemonDexUITestsLaunchTests.swift
-//  PokemonDexUITests
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import XCTest
 
 final class PokemonDexUITestsLaunchTests: XCTestCase {
