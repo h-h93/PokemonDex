@@ -30,12 +30,14 @@
 		67C8B18A2BE94042006015AC /* PKDexStatsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1892BE94042006015AC /* PKDexStatsChartView.swift */; };
 		67C8B18C2BE9636D006015AC /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B18B2BE9636D006015AC /* UIView+Ext.swift */; };
 		67C8B18E2BE966F6006015AC /* PKDexImageSlideCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B18D2BE966F6006015AC /* PKDexImageSlideCollectionView.swift */; };
-		67C8B1952BE975C6006015AC /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = 67C8B1942BE975C6006015AC /* OptionallyDecodable */; };
 		67C8B1992BE97892006015AC /* PKDexAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1962BE97892006015AC /* PKDexAlertVC.swift */; };
 		67C8B19A2BE97892006015AC /* PKDexContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1972BE97892006015AC /* PKDexContainerView.swift */; };
 		67C8B1A22BE97BED006015AC /* PKDexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1A02BE97BED006015AC /* PKDexButton.swift */; };
 		67C8B1A42BE97C35006015AC /* PKDexBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1A32BE97C35006015AC /* PKDexBodyLabel.swift */; };
 		67C8B1AA2BE97E49006015AC /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1A92BE97E49006015AC /* UIViewController+Ext.swift */; };
+		67C8B1AC2BE990DD006015AC /* PokemonDetailVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1AB2BE990DD006015AC /* PokemonDetailVC+Ext.swift */; };
+		67C8B1B02BEA897F006015AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1AF2BEA897F006015AC /* Constants.swift */; };
+		67C8B1B22BEAA4B8006015AC /* PKDexPokemonImageSlideShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B1B12BEAA4B8006015AC /* PKDexPokemonImageSlideShowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,9 @@
 		67C8B1A02BE97BED006015AC /* PKDexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKDexButton.swift; sourceTree = "<group>"; };
 		67C8B1A32BE97C35006015AC /* PKDexBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKDexBodyLabel.swift; sourceTree = "<group>"; };
 		67C8B1A92BE97E49006015AC /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		67C8B1AB2BE990DD006015AC /* PokemonDetailVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonDetailVC+Ext.swift"; sourceTree = "<group>"; };
+		67C8B1AF2BEA897F006015AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		67C8B1B12BEAA4B8006015AC /* PKDexPokemonImageSlideShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKDexPokemonImageSlideShowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C8B1952BE975C6006015AC /* OptionallyDecodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +152,7 @@
 				67854CFF2B99141B00626212 /* String+Ext.swift */,
 				67C8B18B2BE9636D006015AC /* UIView+Ext.swift */,
 				67C8B1A92BE97E49006015AC /* UIViewController+Ext.swift */,
+				67C8B1AB2BE990DD006015AC /* PokemonDetailVC+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				6796D6962B97AD9C006D5DFF /* PKDexError.swift */,
+				67C8B1AF2BEA897F006015AC /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				6796D69A2B97C1C5006D5DFF /* PKDexCollectionViewCell.swift */,
+				67C8B1B12BEAA4B8006015AC /* PKDexPokemonImageSlideShowCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -323,7 +330,6 @@
 			);
 			name = PokemonDex;
 			packageProductDependencies = (
-				67C8B1942BE975C6006015AC /* OptionallyDecodable */,
 			);
 			productName = PokemonDex;
 			productReference = 6796D65C2B97A5A1006D5DFF /* PokemonDex.app */;
@@ -398,7 +404,6 @@
 			);
 			mainGroup = 6796D6532B97A5A1006D5DFF;
 			packageReferences = (
-				67C8B1932BE975C6006015AC /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
 			);
 			productRefGroup = 6796D65D2B97A5A1006D5DFF /* Products */;
 			projectDirPath = "";
@@ -449,18 +454,21 @@
 				67C8B18E2BE966F6006015AC /* PKDexImageSlideCollectionView.swift in Sources */,
 				67C8B1AA2BE97E49006015AC /* UIViewController+Ext.swift in Sources */,
 				6796D6972B97AD9C006D5DFF /* PKDexError.swift in Sources */,
+				67C8B1B02BEA897F006015AC /* Constants.swift in Sources */,
 				6796D6912B97A6B5006D5DFF /* NetworkManager.swift in Sources */,
 				67854CFC2B98D7AD00626212 /* PKDexTitleLabel.swift in Sources */,
 				67854CF92B98B6C400626212 /* PKDexCollectionView.swift in Sources */,
 				6796D6642B97A5A1006D5DFF /* ViewController.swift in Sources */,
 				6796D6602B97A5A1006D5DFF /* AppDelegate.swift in Sources */,
 				67854D062B9A511D00626212 /* PokemonDetailVC.swift in Sources */,
+				67C8B1AC2BE990DD006015AC /* PokemonDetailVC+Ext.swift in Sources */,
 				67854D042B9A33DB00626212 /* PKDexLoadingAnimationVC.swift in Sources */,
 				6796D69B2B97C1C5006D5DFF /* PKDexCollectionViewCell.swift in Sources */,
 				6796D69E2B97C2EF006D5DFF /* PKDexAvatarImageView.swift in Sources */,
 				67C8B19A2BE97892006015AC /* PKDexContainerView.swift in Sources */,
 				67C8B18A2BE94042006015AC /* PKDexStatsChartView.swift in Sources */,
 				6796D6622B97A5A1006D5DFF /* SceneDelegate.swift in Sources */,
+				67C8B1B22BEAA4B8006015AC /* PKDexPokemonImageSlideShowCell.swift in Sources */,
 				67C8B1A22BE97BED006015AC /* PKDexButton.swift in Sources */,
 				67854D002B99141B00626212 /* String+Ext.swift in Sources */,
 				67854D082B9B900E00626212 /* PokemonDetails.swift in Sources */,
@@ -801,25 +809,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		67C8B1932BE975C6006015AC /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/idrougge/OptionallyDecodable";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		67C8B1942BE975C6006015AC /* OptionallyDecodable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67C8B1932BE975C6006015AC /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
-			productName = OptionallyDecodable;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6796D6542B97A5A1006D5DFF /* Project object */;
 }

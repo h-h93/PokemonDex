@@ -1,19 +1,8 @@
-//
-//  NetworkManager.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import UIKit
 
 class NetworkManager {
     
     static let shared = NetworkManager()
-    private let baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=20&offset="
-    private let basePokemonURL = "https://pokeapi.co/api/v2/pokemon/"
-    private let baseStatUrl = "https://pokeapi.co/api/v2/pokemon-species/"
-    private let baseImageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
     private let decoder = JSONDecoder()
     let cache = NSCache<NSString,UIImage>()
     
@@ -24,7 +13,7 @@ class NetworkManager {
     
     
     func getPokemon(offset: Int) async throws -> ([Pokemon], PokemonAPIResponse) {
-        let endpoint = baseUrl + "\(offset)"
+        let endpoint = BaseURLs.baseUrl.rawValue + "\(offset)"
         guard let url = URL(string: endpoint) else { throw PKDexError.invalidUrl}
         
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -47,7 +36,7 @@ class NetworkManager {
         for item in results.results {
             let url: String = item.url
             let pokemonNumber = url.getPokemonNumberFromUrl(urlString: url) ?? ""
-            let pokemonInformation = Pokemon(name: item.name, url: item.url, artworkURL: baseImageUrl+pokemonNumber+".png")
+            let pokemonInformation = Pokemon(name: item.name, url: item.url, artworkURL: BaseURLs.baseImageUrl.rawValue+pokemonNumber+".png", id: pokemonNumber)
             pokemon.append(pokemonInformation)
         }
         
@@ -55,8 +44,8 @@ class NetworkManager {
     }
     
     
-    func getPokemonStats(for name: String) async throws -> PokemonDetails {
-        let urlString = baseStatUrl + "\(name)/"
+    func getPokemonDetails(for name: String) async throws -> PokemonDetails {
+        let urlString = BaseURLs.baseStatUrl.rawValue + "\(name)/"
         guard let url = URL(string: urlString) else { throw PKDexError.invalidUrl }
         
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -67,7 +56,6 @@ class NetworkManager {
             let results = try decoder.decode(PokemonDetails.self, from: data)
             return results
         } catch {
-            print("failed to decode ")
             throw PKDexError.unableToComplete
         }
     }
@@ -99,7 +87,6 @@ class NetworkManager {
             let results = try decoder.decode(PokemonStats.self, from: data)
             return results
         } catch {
-            print(error)
             throw(PKDexError.unableToComplete)
         }
     }

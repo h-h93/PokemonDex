@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import UIKit
 
 class ViewController: PKDexLoadingAnimationVC {
@@ -136,7 +129,7 @@ extension ViewController: UICollectionViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let pokemonDetailVC = PokemonDetailVC(pokemonName: pokemon[indexPath.item].name, pokemon: pokemon[indexPath.item])
+        let pokemonDetailVC = PokemonDetailVC(pokemon: pokemon[indexPath.item])
         navigationController?.pushViewController(pokemonDetailVC, animated: true)
     }
 }

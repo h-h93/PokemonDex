@@ -17,13 +17,23 @@ final class PokemonDexTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    
+    func testNetworkCalls() async throws {
+        let pokemonList = try await NetworkManager.shared.getPokemon(offset: 0)
+        XCTAssertNotNil(pokemonList, "Pokemon unable to download or decode")
+        
+        let pokemon = pokemonList.0.first
+        XCTAssert(pokemon != nil, "Pokemon unable to decode")
+        
+        let pokemonImage = await NetworkManager.shared.downloadImage(fromUrl: pokemon!.artworkURL)
+        XCTAssert(pokemonImage != nil, "Failed to download image")
+        
+        let pokemonDetails = try await NetworkManager.shared.getPokemonDetails(for: pokemon!.name)
+        XCTAssertNotNil(pokemonDetails, "Failed to get pokemon details")
+        
+        let pokemonStats = try await NetworkManager.shared.getDetailedStats(for: pokemon!.url)
+        XCTAssertNotNil(pokemonStats, "Failed to get pokemon stats")
     }
 
     func testPerformanceExample() throws {

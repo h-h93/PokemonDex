@@ -1,15 +1,8 @@
-//
-//  PokemonCell.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import UIKit
 
 class PKDexCollectionViewCell: UICollectionViewCell {
-    let pokemonImage = PKDexAvatarImageView(frame: .zero)
-    let pokemonNameLabel = PKDexTitleLabel(textAlignment: .center)
+    private let pokemonImage = PKDexAvatarImageView(frame: .zero)
+    private let pokemonNameLabel = PKDexTitleLabel(textAlignment: .center)
     
     static let reuseID = "PokemonCell"
     
@@ -29,6 +22,7 @@ class PKDexCollectionViewCell: UICollectionViewCell {
         layer.borderWidth = 2
         layer.borderColor = UIColor.secondarySystemBackground.cgColor
         layer.cornerRadius = 10
+        pokemonNameLabel.minimumScaleFactor = 0.70
         
         addSubview(pokemonImage)
         addSubview(pokemonNameLabel)
@@ -52,6 +46,5 @@ class PKDexCollectionViewCell: UICollectionViewCell {
         pokemonNameLabel.text = pokemon.name
         pokemonImage.downloadPokemonImage(url: pokemon.artworkURL)
     }
-    
 }
 

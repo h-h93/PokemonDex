@@ -1,10 +1,3 @@
-//
-//  PKDexLabel.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 06/03/2024.
-//
-
 import UIKit
 
 class PKDexTitleLabel: UILabel {
@@ -33,7 +26,6 @@ class PKDexTitleLabel: UILabel {
         textColor = .label
         adjustsFontSizeToFitWidth = true
         adjustsFontForContentSizeCategory = true
-        adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75
         numberOfLines = 2
         lineBreakMode = .byTruncatingTail

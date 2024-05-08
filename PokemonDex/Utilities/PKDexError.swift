@@ -1,10 +1,3 @@
-//
-//  PKDexError.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import Foundation
 
 enum PKDexError: String, Error {

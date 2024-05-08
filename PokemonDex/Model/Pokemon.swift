@@ -1,10 +1,3 @@
-//
-//  Pokemon.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 05/03/2024.
-//
-
 import Foundation
 
 // MARK: - Response
@@ -27,4 +20,5 @@ struct Pokemon: Codable, Hashable {
     let name: String
     let url: String
     let artworkURL: String
+    let id: String
 }

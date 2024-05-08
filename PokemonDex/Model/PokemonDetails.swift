@@ -1,36 +1,28 @@
-//
-//  PokemonStats.swift
-//  PokemonDex
-//
-//  Created by hanif hussain on 08/03/2024.
-//
-
 import Foundation
-// flavor text, capture rate, gender rate, is legendary, is mythical 
 
-// MARK: - PokemonStats
+// MARK: - PokemonDetails
 struct PokemonDetails: Codable {
-    let baseHappiness, captureRate: Int
-    let color: Result
-    let eggGroups: [Result]
-    let evolutionChain: EvolutionChain
+    let baseHappiness, captureRate: Int?
+    let color: Result?
+    let eggGroups: [Result]?
+    let evolutionChain: EvolutionChain?
     let evolvesFromSpecies: Result?
-    let flavorTextEntries: [FlavorTextEntry]
-    let formDescriptions: [String]
-    let formsSwitchable: Bool
-    let genderRate: Int
-    let genera: [Genus]
-    let generation, growthRate, habitat: Result
-    let hasGenderDifferences: Bool
-    let hatchCounter, id: Int
-    let isBaby, isLegendary, isMythical: Bool
-    let name: String
-    let names: [Name]
-    let order: Int
-    let palParkEncounters: [PalParkEncounter]
-    let pokedexNumbers: [PokedexNumber]
-    let shape: Result
-    let varieties: [Variety]
+    let flavorTextEntries: [FlavorTextEntry]?
+    let formDescriptions: [String]?
+    let formsSwitchable: Bool?
+    let genderRate: Int?
+    let genera: [Genus]?
+    let generation, growthRate, habitat: Result?
+    let hasGenderDifferences: Bool?
+    let hatchCounter, id: Int?
+    let isBaby, isLegendary, isMythical: Bool?
+    let name: String?
+    let names: [Name]?
+    let order: Int?
+    let palParkEncounters: [PalParkEncounter]?
+    let pokedexNumbers: [PokedexNumber]?
+    let shape: Result?
+    let varieties: [Variety]?
 }
 
 // MARK: - EvolutionChain
